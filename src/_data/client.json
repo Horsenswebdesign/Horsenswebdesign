@@ -1,0 +1,15 @@
+{
+    "name": "Lund Webdesign",
+    "email": "info@lundwebdesign.dk",
+    "phoneForTel": "50577411",
+    "phoneFormatted": "(45) 50 57 74 11",
+    "address": {
+        "lineOne": "Bækvej 34",
+        "lineTwo": "Second Address Line",
+        "city": "Horsens",
+        "state": "",
+        "zip": "8700",
+        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    },
+    "domain": "https://www.codestitch.app"
+}

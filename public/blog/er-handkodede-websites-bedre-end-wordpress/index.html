@@ -1,0 +1,362 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Er håndkodede websites bedre end WordPress?">
+        <meta name="keywords" content="">
+        <link rel="canonical" href="https://www.codestitch.app/blog/er-handkodede-websites-bedre-end-wordpress/">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Er håndkodede websites bedre end WordPress?" />
+        <meta property="og:description" content="Er håndkodede websites bedre end WordPress?" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.codestitch.app/blog/er-handkodede-websites-bedre-end-wordpress/" />
+        <meta property="og:image" content="/assets/images/logo-small.png" />
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
+
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v1">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/assets/svgs/logo-white.svg">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+        
+            <link rel="preload" as="image" href="/assets/images/blog/landing.jpg" />
+        
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+        <script defer src="/assets/js/nav.js"></script>
+        <script defer src="/assets/js/dark.js"></script>
+
+        
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+
+        <!--For home page, use service keywords for the title, including location for SEO.
+        Other pages should just include the page name.
+        
+        EXAMPLE:
+        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
+        About Page - About us | Painters and Co.
+        -->
+        <title>
+            
+                Er håndkodede websites bedre end WordPress?
+                |
+                Lund Webdesign
+            
+        </title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <!--Nav Logo-->
+    <a href="" class="cs-logo" aria-label="back to home">
+        <img src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo-light.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+    </a>
+    <!--Top Bar-->
+    <ul class="cs-top-bar">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Kontakt os nu</span>
+                <a href="tel:+4550577411" class="cs-link">50 57 74 11</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send en besked</span>
+                <a href="mailto:Info@Horsenswebdesign.dk" class="cs-link">Info@Horsenswebdesign.dk</a>
+            </div>
+        </li>
+        <li class="cs-item cs-remove">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Besøg os her</span>
+                <a href="" class="cs-link">Bækvej 34, 8700 Horsens</a>
+            </div>
+        </li>
+    </ul>
+    <div class="cs-bottom-bar">
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link ">
+                            Hjem
+                        </a>
+                    </li>
+                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/webdesign" class="cs-li-link cs-drop-link ">Webdesign</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/logographicdesign" class="cs-li-link cs-drop-link ">Logo & Grafisk design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/portfolio" class="cs-li-link ">
+                            Portefølje
+                        </a>
+                    </li>
+                     <li class="cs-li">
+                        <a href="/about" class="cs-li-link ">
+                            Om os
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact" class="cs-li-link ">
+                            Kontakt
+                        </a>
+                    </li>
+                   
+                   
+                </ul>
+            </div>
+        </nav>
+        <a href="" class="cs-button-solid cs-nav-button">Kontakt Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+         <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> 
+    </div>
+</header>
+                                
+        <main id="main">
+            
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                  Blog Article                -->
+            <!-- ============================================ -->
+
+            <article class="blog-article">
+                <!--Main Article Image-->
+                <picture class="blog-mainImage">
+                    <img src="/assets/images/blog/landing.jpg" alt="cgbnh" width="795" height="400" decoding="async" />
+                </picture>
+
+                <!--Article Info-->
+                <div class="article-group">
+                    <h1 class="blog-h1">Er håndkodede websites bedre end WordPress?</h1>
+                    <div class="blog-authorGroup">
+                        <!--Author Image-->
+                        <picture class="blog-author-img">
+                            <img
+                            src="/assets/svgs/profile.svg"
+                            alt="house"
+                            width="32"
+                            height="32"
+                            decoding="async">
+                        </picture>
+                        <span class="blog-author">Niels Johan Tygesen</span>
+                        <span aria-hidden="true" class="blog-dot"></span>
+                        <!--Blog Date-->
+                        <span class="blog-date">Apr 11, 2024</span>
+                    </div>
+                </div>
+                <section id="blog-content">
+                    <h2>Statiske hjemmesider (håndkodede) vs. dynamiske hjemmesider (WordPress, Wix, etc.)</h2>
+<p>Det vigtigste at tage med:</p>
+<ol>
+<li>Statiske hjemmesider, der er kodet fra bunden, indlæses op til 10 gange hurtigere end page builders som WordPress. Hvis det tager mere end 3 sekunder at indlæse din hjemmeside, vil størstedelen af dine besøgende forlade siden og miste kunder.</li>
+<li>Google indekserer din hjemmeside baseret på, hvordan din mobilside fungerer, og page builder-mobilsider er ikke så optimerede, ikke så hurtige, ikke så velbyggede og ofte ikke 100% responsive, hvilket kan hæmme din søgerangering.</li>
+<li>Mine håndlavede statiske sider er kodet mobile first, hvilket betyder, at jeg skriver koden med udgangspunkt i mobilskærme og derefter tilføjer kode til tablet og desktop. Det gør mobilen mere responsiv, optimeret og utrolig hurtig at indlæse - hvilket forbedrer din hjemmesides performance på Google og sikrer, at besøgende ikke forlader din side.</li>
+<li>WordPress er berygtet for sine sårbarheder og skal opdateres regelmæssigt for at lappe sikkerhedsfejl, som hackere kan bruge til at kompromittere din hjemmeside. Håndlavede statiske sider kan ikke kompromitteres så let og er stort set uigennemtrængelige på grund af deres enkelhed og mangel på indgangspunkter til hacking.</li>
+</ol>
+<p>I webudviklingsverdenen er der to typer hjemmesider - statiske og dynamiske. Et statisk site er et site, der kun har de vigtigste byggesten i webudvikling: html, css og JavaScript. Der er ingen databaser eller funktionaliteter eller manipulation af data eller noget andet fancy. Den viser bare siden, som den blev skabt. Disse tre kodesprog udgør alt, hvad du kan se på en hjemmeside, og i mange tilfælde er det alt, hvad du behøver. Når du indlæser en statisk side, er det din browser, der læser og kompilerer koden til hjemmesiden og indlæser den med det samme. Hver bruger indlæser præcis det samme indhold. Og en af de bedste måder at lave en statisk side på er at kode den i hånden (hvilket er det, jeg gør bedst!) eller med en statisk sidegenerator.</p>
+<p>Et dynamisk site (WordPress, page builders) er et site, der bruger ekstra sprog og teknologier på serversiden til at tage html, css og aktiver fra en database og sy websitet sammen, mens det indlæses på serveren, og SÅ bliver det sendt til browseren. I stedet for at browserne kompilerer koden, er det serveren, der kompilerer den for browseren og sender den afsted, og i stedet for at hver bruger får serveret nøjagtigt det samme indhold, får de alle serveret forskelligt indhold individuelt. Det gør indlæsningstiderne langsommere, og din hjemmeside er sårbar over for angreb fra malware og hackere, der afbryder processen, hvor serveren tjekker databasen for hjemmesidens indhold. Statiske sider har ingen databaser, så der er ikke noget at angribe. Vi vil dykke mere ned i dette senere på siden.</p>
+<p>Dynamiske sider omfatter hjemmesider, der er bygget af WordPress, Wix, Squarespace, GoDaddy, page builder eller indbygget i php osv. Disse sidebyggere gemmer aktiverne og indholdet i en database, og når nogen besøger hjemmesiden, tjekker serveren sin beholdning af ting, som browseren beder om, og den trækker dem fra databasen og Frankenstein dem sammen til den landingsside, du ser. Selvom disse sidebyggere gør det nemt og billigt at lave sin egen hjemmeside, så er der KÆMPE ulemper sammenlignet med de statiske hjemmesider, som jeg bygger.</p>
+<h2>Hvorfor er statiske websites hurtigere end dynamiske websites?</h2>
+<p>Et af de vigtigste aspekter af din hjemmesides placering på Google er, hvor hurtigt den indlæses og fungerer - især på mobilen. Problemet med dynamiske hjemmesider (WordPress, Wix osv.) er, at serveren er længere tid om at tjekke databasen og sætte det hele sammen. Og jo flere plugins og ekstra ting, du har på din hjemmeside, jo langsommere bliver den. Det er kritisk, fordi undersøgelser har vist, at størstedelen af brugerne forlader en hjemmeside, hvis det tager mere end 3 sekunder at indlæse den. Så hvis din hjemmeside tager mere end 3 sekunder at indlæse, hvad er så meningen med at have den, hvis størstedelen af brugerne ikke engang vil se den? Det er en af de STØRSTE ulemper, jeg ser ved WordPress- og Wix-hjemmesider - de kan tage for lang tid at indlæse og koste dig penge.</p>
+<p>Statiske sider kan dog indlæses op til 10 gange hurtigere end en dynamisk hjemmeside, fordi den ikke behøver at lave hjemmesidekirurgi og sætte sidens lemmer sammen igen så hurtigt som muligt på browserens operationsbord. Alt er allerede bygget på forhånd, så alt, hvad browseren skal gøre, er at indlæse det og smide det efter os. Der er ingen plugins, ingen databaser, ingen spildplads eller bloat. Hver kodelinje, jeg skriver på mine sider, er lavet med et formål og skrevet på en organiseret måde, der er let for Google at læse og forstå. Dynamiske sider som WordPress har tonsvis af oppustet og rodet kode, som kun gør indlæsningstiderne endnu længere.</p>
+<p>Forestil dig, at du har en tallerken spaghetti og gerne vil vide, hvor mange nudler der er på din tallerken. De er alle sammen blandet sammen og viklet ind i hinanden, så det vil tage lang tid at skille dem ad og tælle, hvor mange nudler der er, og få det til at give mening. På din anden tallerken (din &quot;statiske&quot; tallerken) har du alle dine nudler linet op i pæne grupper af 10 på tallerkenen med kødet ved siden af klar til at spise (spis ikke spaghetti på denne måde). Det er meget nemmere og hurtigere at analysere, hvor mange nudler du har, når alt er grupperet sammen og organiseret. Det er forskellen på, hvordan koden på et dynamisk site ser ud og koden på et statisk site. Det kaldes &quot;spaghettikode&quot;. Og det gør det mere tidskrævende for browseren at analysere og indlæse et site, og Googles søgecrawlere vil have svært ved at forstå dit indhold, og hvad det betyder, da det er gemt væk i et rod af kode uden nogen kontekst omkring det.</p>
+<p>Benchmark-loadtiden for en hjemmeside er 2 sekunder. Mine håndlavede statiske hjemmesider kan ofte indlæses på under 0,5 sekunder, hvilket er betydeligt lavere end gennemsnittet. De indlæses næsten med det samme. Koden er grupperet og organiseret, så det er lettere for din browser og for Google at læse og forstå den, hvilket forbedrer indlæsningstiderne og til gengæld forhindrer kunderne i at forlade din hjemmeside og forbedrer din hjemmesides placering på Google. Så hvis din hjemmeside ikke giver mange kunder, så tjek, hvor lang tid det tager at indlæse den med dette værktøj fra Google.</p>
+<p>Hvis indlæsningstiden er over 3 sekunder, er der stor sandsynlighed for, at folk forlader siden, før de overhovedet når den.</p>
+<p>Apropos Google og hastighed, så har de for nylig lavet en opdatering af deres søgealgoritme, hvor de rangerer din hjemmeside baseret på, hvordan mobilsiden fungerer, kaldet Mobile First Indexing. Så jo hurtigere din mobilside loader, jo bedre rangerer du. Det er her, statiske sider vinder hver gang.</p>
+<h2>Mobile first-programmering og øget hastighed på websitet</h2>
+<p>Mobile first-programmering er noget, der ikke kan gøres med en page builder. Det er et designmønster, hvor vi som udviklere skriver koden, så vi starter med mobilskærmene og tilføjer kode til tablet og desktop, efterhånden som vi går ned i filen. Når browseren læser CSS-filen for at se, hvordan siden skal struktureres og styles, læser den den fra top til bund. Hvis vi starter øverst med at skrive desktop-kode, vil browseren læse den først og indlæse den, og derefter vil den fortsætte ned ad siden og tjekke for regler for forskellige skærmstørrelser og indlæse de designs, der redigerer desktop-indholdet, så det passer til mobilen. Hvis du er på mobil, og mobilkoden er i bunden af CSS-filen, skal browseren læse AL koden i den fil, indlæse desktopkoden, tjekke skærmstørrelsesreglen og sige &quot;ja, det her er godt nok til mobil&quot;. Derefter skal den bryde alt ned fra desktop og presse det hele ind på mobilskærmen. Det er spild af tid og ressourcer.</p>
+<p>Med mobile first-metoden står din mobilkode øverst og læses først. Så når du er på din telefon, og siden indlæses, indlæser den først mobilstylingkoden, tjekker skærmstørrelsesreglerne og siger: &quot;Nå, det var det, drenge, sæt koden op på skærmen. Det er showtime!&quot;.</p>
+<p>Lad mig fortælle dig af erfaring - det er lettere at få indhold til at vokse ind i sin plads i stedet for at krympe det ned og proppe det ind i de mindre rum. Mobile first programming + static site development vil gøre din hjemmeside lynhurtig. Det kan endda chokere nogle mennesker.</p>
+<h2>Hvorfor er statiske websites mere sikre end dynamiske websites?</h2>
+<p>Dynamiske sites har databaser og serverside-platforme, der kan angribes, når de forsøger at få adgang til databasen eller content management-systemerne, der gemmer alle dit websites data. Så mens serveren bygger siden og gør den klar til browseren, kan hackere blande sig i processen og kompromittere din hjemmeside.</p>
+<p>Statiske sider har dog intet at angribe. Der er ingen database, ingen session tokens, ingen information, der indsamles eller overføres, som en hacker kan blande sig i eller opsnappe. Der er ingen trin, hvor de kan glide ind og snige noget i vores hjemmesides baglomme på vej til browseren.</p>
+<p>Et af problemerne med WordPress-hjemmesider er mængden af plugins, man skal bruge. Hvis du opretter en WordPress-hjemmeside og glemmer alt om den i et stykke tid, vil mange af disse plugins være blevet opdateret for at lappe sikkerhedshuller, og hvis du ikke opdaterer dem, vil din hjemmeside ikke være sikker mod angribere, og nogle gange vil de forældede plugins bare ikke spille sammen med de andre, og det vil lægge hele hjemmesiden ned, uden at du ved det. Hvem har tid til at følge med i alle disse opdateringer og patches? Det er her, mit arbejde med at skabe statiske sider virkelig skiller sig ud - der er ingen opdatering nødvendig. Det er bare html og css. Der er ingen sikkerhedsopdateringer, der skal foretages manuelt for at holde din side sikker. Når det er oppe, er det færdigt.</p>
+<p>Tænk på det sådan her - du har to hytter i skoven, den ene har elektricitet og internet og smarte elektroniske låse på dørene, som du styrer med en app, og lys og apparater er forbundet til internettet og skyen, som du styrer fra din telefon. Det er at leve! I den anden hytte er den ikke forbundet til et net eller en sky, og pejsen laver al varmen, og låsene på dørene er bare almindelige gamle dødbolte.</p>
+<p>I den anden smarte hytte hackede nogen sig ind på deres internetforbindelse og fik kontrol over låsene på huset og deaktiverede dem, så de kunne komme ind og tage alt. Alle de smarte ting og sager skabte bare flere indgange for angribere til at komme ind i din hytte, når det eneste, du skulle bruge hytten til, var at slappe af efter en vandretur.</p>
+<p>Men den anden hytte, der ikke havde elektricitet eller internetstyrede låse og enheder, er stadig sikker. De klarer sig med det mest basale som en brændeovn og lanterner. Det er html og css. Bare gode gammeldags ildovne og lanterner. Og låsene på døren er sikre mod angreb. Der er ingen, der kommer ind. Det er, hvad en statisk hjemmeside er. Det fjerner alt ekstraudstyret og er bare en hjemmeside, der er bygget op af sine kernebyggesten. Det er den type hjemmesider, jeg laver. De er bjælkehytter, der er skåret og bygget i hånden med kun en håndværkers værktøj. Disse sidebyggere er masseproducerede sikkerhedsrisici af lavere kvalitet.</p>
+<p>Og da WordPress er det mest populære content management system (CMS) til opbygning af hjemmesider, vil hackere specifikt gå efter WordPress-hjemmesider for at udnytte kendte sårbarheder og gå efter hjemmesider med forældede versioner og plugins. Din hjemmeside har et mål på ryggen. Ved at gå den statiske vej fjerner vi det mål fra din ryg, og din hjemmeside kan leve frit uden at bekymre sig om at blive bortført fra internettets gader.</p>
+<p>Men hvad med de servere, som disse statiske sider ligger på? Kan de ikke blive kompromitteret, og siden kan gå ned? Nope! Når dit statiske site bliver serveret af et Content Delivery Network (CDN), ligger det på flere servere over hele verden, klar til at blive tilgået. Så når en server går ned, kan den bare indlæses fra en anden på et andet sted. Ingen nedetid!</p>
+<h2>Håndkodede statiske sites vs Wordpress og Wix</h2>
+<p>Alt i alt vil håndlavede statiske hjemmesider næsten ALTID slå page buildere som WordPress og Wix. Statiske hjemmesider indlæses på millisekunder sammenlignet med de mange sekunder eller mere, det kan tage for en WordPress- eller Wix-side. Og det faktum, at de er næsten uigennemtrængelige fra at blive hacket eller kompromitteret på grund af deres enkelhed, gør dem til den klare vinder i kampen om din virksomhed.</p>
+<p>Dynamiske sider tilbyder i øjeblikket heller ingen måder at lave mobile first-programmering på og er ikke i stand til at udnytte fordelene ved det. Et af de problemer, du selv kan se, er at finde et Wix-site og prøve at ændre størrelsen på browseren. Du vil bemærke, at de ikke tilbyder en tabletversion af din side, og at hele siden ikke er særlig responsiv, hvilket betyder, at indholdet ikke ændrer sig eller flytter sig, når skærmen bliver større eller mindre. På visse skærmstørrelser bliver indholdet på din hjemmeside klemt inde i sin boks og bliver faktisk skåret af i kanten af skærmen, fordi det ikke har nogen steder at være, og nu kan folk ikke engang læse, hvad der står. Eller tekst kan begynde at vikle sig rundt om billeder på mærkelige måder, der forvrænger layoutet og får din side til at se ødelagt ud. Disse sidebyggere giver dig ikke den mængde kontrol, du har brug for til at gøre din side responsiv til alle mulige skærmstørrelser uden at vide, hvordan man koder og får adgang til sidebyggernes API for at tale med deres system og lave meget tilpasset, kompliceret arbejde.</p>
+<h2>Hvorfor skal jeg betale nogen for at lave et website, når jeg kan gøre det selv?</h2>
+<p>Wix og WordPress reklamerer med, at alle kan lave en hjemmeside gratis, hvilket gør det meget tiltalende for små virksomheder, der ikke har penge til at hyre en udvikler som mig til at lave en til dem. Men hvis sidehastighed, indlæsningstider, sikkerhed, konvertering af flere kunder og Google-placeringer er noget, du gerne vil have løst med en hjemmeside, og hvis du gerne vil skille dig ud fra konkurrenterne, så anbefaler jeg på det kraftigste, at du finder nogen, der kan lave en statisk hjemmeside til dig (som mig!). Tænk på det på denne måde: Alle kan bare købe maling og male deres eget hus. Men ikke alle vil være i stand til at gøre det med samme kvalitet som en professionel, og deres hus vil lide under det og se forfærdeligt ud. Ligesom maling er webudvikling et håndværk, og det kan blive lidt dyrt. At få en statisk hjemmeside bygget af en udvikler kan løbe op i alt fra 1.800 til 3.000+ kroner afhængigt af kompleksiteten. Så det er naturligt at blive tiltrukket af page builders og spare penge ved at gøre det selv. Det er der ikke noget galt med! Men hvis du ønsker at tage din virksomhed til det næste skridt, skal du stoppe med at lade penge ligge på bordet og overveje at få lavet et statisk site. Lav noget, der performer langt bedre, og få et forspring i forhold til konkurrenterne.</p>
+<p>Og der er nogle udviklere, der laver tilpassede WordPress-websteder, og de gør et godt stykke arbejde og bekymrer sig om, hvad de laver. Jeg siger ikke, at ALLE WordPress-websteder eller -udviklere er svindlere eller laver forfærdelige produkter. De er stadig helt ok at bruge og har deres formål. Hvis du har brug for en hjemmeside, der SKAL have en database og dynamisk opbygge hundredvis af sider afhængigt af det indhold, den besøgende beder om, så er det der, WordPress skinner. WordPress er fantastisk til folk, der vil redigere deres eget indhold, oprette en onlinebutik, en blog, de selv kan skrive og redigere, brugerdefinerede applikationer eller datamanipulation og alt, hvad der har brug for en database. Statiske sider er netop det - de er statiske, uforanderlige. De er perfekte til hjemmesider, der kun har brug for at vise information. De gemmer dem ikke, manipulerer dem ikke og genererer ikke nyt indhold til hver enkelt besøgende. At bruge Wordpress til at lave en ren informationsside er som at bruge et trykluftsbor til at slå et søm i.</p>
+<p>Chancerne er store for, at dine konkurrenter også har et WordPress-site. Nogle udviklere eller bureauer tager tusindvis af kroner for at lave disse simple WordPress-sider, som kunne have været lavet statisk, og mange af dem er bare skabeloner, som de afleverer til dig uden support, wham bam thank you ma'am. Så det vil være svært at finde en god udvikler eller et godt bureau, men det vil være besværet værd. Du skal bare bruge lidt tid på at sortere de dårlige fra de gode.</p>
+<h2>Invester i dit website</h2>
+<p>Min erfaring er, at der findes to typer mennesker: virksomhedsejere og iværksættere. En af de mest almindelige fejl, virksomhedsejere begår, når det gælder en hjemmeside, er, at de ser det som en udgift i stedet for en investering. Iværksættere forstår, at når man bruger penge på virksomheden, er det en investering I virksomheden, ikke en udgift, og de kan retfærdiggøre værdien af det ved at se det afkast, som investeringen vil give. For eksempel køber du en hjemmeside af en udvikler til 20.000 kroner for at lave en statisk side til dig. Det lyder af meget, men med et flottere og mere velfungerende site kan du måske konvertere besøgende til kunder, som ellers ville have forladt sitet, fordi det tog for lang tid at indlæse eller så forældet og forfærdeligt ud, og som om man ikke kan stole på dig. 20.000 kroner indbringer pludselig 10.000 kroner ekstra om året eller mere efter et stykke tid i nye forretninger. Hvis du kunne bruge 3.000 kroner og på et år tjene 10.000 kroner på det, ville du så foretage den &quot;investering&quot;? Jeg ved godt, at jeg har taget de tal ud af den blå luft, men det betyder ikke, at det ikke er muligt.</p>
+<p>Lad os se på, hvordan jeg gør tingene. Jeg sælger hjemmesider for 999 kroner om måneden. Nogle tænker måske: &quot;Hvorfor skal jeg betale hver måned i årevis?&quot; Tænk på denne måde: Med alle de fordele, mine statiske hjemmesider har, har de så indbragt mere end 999 kroner om måneden i værdi i denne måned? Svaret vil næsten altid være ja. En maler, for eksempel, ville tjene flere tusinde kroner per ny kunde. Hvis min hjemmeside kun giver 1 ekstra kunde om måneden, er det et rigtig fornuftigt afkast. Og hver ny kunde, du får hver måned, øger kun den værdi, du får fra mine sider. Og for de 999 kroner om måneden har du en person på vagt døgnet rundt, som håndterer din hjemmeside for dig, opdaterer siden i forhold til ændringer i søgealgoritmernes prioriteter og besvarer alle de spørgsmål, du måtte have. Du får mere end bare en hjemmeside, du får en partner, som også er investeret i din virksomheds succes.</p>
+<p>Hjemmesider er lidt ligesom tatoveringer - man får, hvad man betaler for. Hvis du vil have noget, der ser generisk eller forældet ud, og som kan få folk til at undgå dig, så er det det, du får for en hjemmeside til 3000 kroner. Ligesom når du skal finde en tatovør, er du nødt til at lave noget research og finde velrenommerede udviklere, der kan svare på alle dine spørgsmål og bare lave et smukt produkt af høj kvalitet.</p>
+<p>Så med alle disse billige og hurtige muligheder for at bygge en hjemmeside, er det vigtigt at vide, at en god hjemmeside aldrig vil komme fra det prisniveau. Det burde faktisk være afskrækkende. Hvis jeg skulle opereres, ville jeg bestemt ikke stole på den læge, jeg fandt online til at gøre det for omkring 350 kroner, når det koster 4.000 kroner alle andre steder. Det skriger bare af manglende kvalitet og manglende indsats, og et eller andet sted springer de et par trin over for at lave det så hurtigt som muligt for at tjene så mange penge som muligt med så lille en indsats som muligt. Din virksomhed fortjener bedre. Hvis du vil have et billigt site, kan du forvente billige resultater. Men hvis du vil have det gjort rigtigt, er det her, en udvikler kommer ind i billedet.</p>
+<h2>Konklusion</h2>
+<p>Uanset om du vælger en statisk eller en dynamisk hjemmeside, kommer det i sidste ende an på dit budget og dine prioriteter. Hvis du ikke har meget at bruge på en hjemmeside og bare har brug for noget derude, så er det okay at bruge WordPress eller Wix. Men hvis du har budgettet til at få lavet noget, der er et skridt op og kan maksimere din online tilstedeværelse, så er det bedste investeringsafkast at få lavet en statisk side. Eller hvis du har brug for noget større, der involverer behovet for en database eller muligheden for selv at redigere dit indhold, så er WordPress og andre sidebyggere vejen frem.</p>
+<p>Med min forretningsmodel behøver du ikke at vælge mellem at gøre det selv for at spare penge eller få en udvikler til at gøre det til en høj pris. For i stedet for at tage over 2500 dollars for mit arbejde, tilbyder jeg det for 0 dollars og 150 dollars om måneden, så mit arbejde kan være mere tilgængeligt for små virksomheder, der har mest brug for det og har brug for en partner, de kan stole på, til at håndtere webdelen af deres virksomhed, mens de håndterer deres daglige arbejde. Jeg kan udføre denne slags arbejde for så lidt på forhånd, fordi jeg er hjemmegående far - mine regninger er allerede betalt, jeg skal bare blive ved med at være gift! Så jeg har råd til at lægge alt dette arbejde i mine sites for så lidt på forhånd, fordi jeg ikke har nogen driftsomkostninger eller et kontor eller ansatte. Det er bare mig. Mit mål er at bygge en hjemmeside, der holder i årevis og hjælper dig med at få din forretning til at vokse, og jeg vil være en del af det sammen med dig hele vejen.</p>
+
+                </section>
+            </article>
+        </div>
+        <!-- End .main-content -->
+
+        <!-- ============================================ -->
+<!--                Featured Posts                -->
+<!-- ============================================ -->
+
+<div class="blog-sidebar">
+  <!--Featured-->
+  <div class="blog-featured-group">
+    <span class="blog-header">Featured Posts</span></div>
+  <!--Add anything else in the sidebar below-->
+</div>
+    </div>
+
+        </main>
+        <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1340">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <h2 class="cs-title">Få en webløsning, der passer til dine behov</h2>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit facebook profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg" alt="facebook" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit twitter profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-1a.svg" alt="twitter" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-1a.svg" alt="instagram" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit youtube profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-1a.svg" alt="instagram" width="11" height="11">
+                </a>
+            </div>
+        </div>
+        <!-- Links -->
+        <div class="cs-ul-wrapper">
+            <span class="cs-header">Navigation</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="/webdesign">Services</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Projekter</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/about">Om Os</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-ul-wrapper">
+            <!-- Contact Info -->
+            <span class="cs-header">Kontakt</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:4550577411">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="phone icon" width="24" height="24">
+                        +45 50 57 74 11 
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="mailto:info@Horsenswebdesign.dk">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/email-1a.svg" alt="email icon" width="24" height="24">
+                        info@Horsenswebdesign.dk
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-1a.svg" alt="pin icon" width="24" height="24">
+                        Horsens, Horsens
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-credit">
+            © Copyright 2024 <a href="" class="cs-credit-link" target="_blank">Horsens Webdesign</a>
+        </span>
+       
+    </div>
+</footer>
+                                
+
+    </body>
+</html>

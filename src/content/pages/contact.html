@@ -1,0 +1,92 @@
+---
+title: 'Horsens Webdesign | Kontakt'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'contact/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Kontakt Os</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/4.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Contact Form                  -->
+    <!-- ============================================ -->
+
+    <section id="cs-contact">
+        <div class="cs-container">
+            <form id="cs-form" name="Contact Form" method="post">
+                <div class="cs-content">
+                    <span class="cs-topper">Kontakt</span>
+                    <h2 class="cs-title">Hør fra os</h2>
+                    <p class="cs-text">
+                        Hør hvad en skræddersyet løsning fra os, kan gøre for dig og dit firma
+                    </p>
+                </div>
+                <label>
+                    Navn
+                    <input required type="text" id="name" name="name" placeholder="Navn">
+                </label>
+                <label>
+                    Email
+                    <input required type="text" id="email" name="email" placeholder="Email">
+                </label>
+                <label>
+                    Telefonnummer
+                    <input required type="text" id="phone" name="phone" placeholder="Telefonnummer">
+                </label>
+                <label class="cs-label-message">
+                    Besked
+                    <textarea required name="Message" id="message" placeholder="Skriv besked..."></textarea>
+                </label>
+                <button class="cs-button-solid" type="submit">Send besked</button>
+            </form>
+            <div class="cs-right-section">
+                <!--Email-->
+                <span class="cs-header">Email</span>
+                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
+                <!--Phone-->
+                <span class="cs-header">Telefonnummer</span>
+                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
+                <!--Address-->
+                <span class="cs-header">Adresse</span>
+                <a class="cs-link" href="{{client.address.mapLink}}">
+                    {{client.address.lineOne}}
+                    
+                   
+                    <br />
+                    <span class="cs-block">
+                         {{client.address.zip}},
+                        {{client.address.city}}
+                     
+                       
+                    </span>
+                </a>
+
+                <!-- Background Image-->
+                <picture class="cs-bg-picture">
+                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
+                </picture>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

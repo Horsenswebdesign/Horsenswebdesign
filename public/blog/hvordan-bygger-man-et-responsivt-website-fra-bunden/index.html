@@ -1,0 +1,385 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Hvordan bygger man et responsivt website fra bunden?">
+        <meta name="keywords" content="">
+        <link rel="canonical" href="https://www.codestitch.app/blog/hvordan-bygger-man-et-responsivt-website-fra-bunden/">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Hvordan bygger man et responsivt website fra bunden?" />
+        <meta property="og:description" content="Hvordan bygger man et responsivt website fra bunden?" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.codestitch.app/blog/hvordan-bygger-man-et-responsivt-website-fra-bunden/" />
+        <meta property="og:image" content="/assets/images/logo-small.png" />
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
+
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v1">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/assets/svgs/logo-white.svg">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+        
+            <link rel="preload" as="image" href="/assets/images/blog/landing.jpg" />
+        
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+        <script defer src="/assets/js/nav.js"></script>
+        <script defer src="/assets/js/dark.js"></script>
+
+        
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+
+        <!--For home page, use service keywords for the title, including location for SEO.
+        Other pages should just include the page name.
+        
+        EXAMPLE:
+        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
+        About Page - About us | Painters and Co.
+        -->
+        <title>
+            
+                Hvordan bygger man et responsivt website fra bunden?
+                |
+                Lund Webdesign
+            
+        </title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <!--Nav Logo-->
+    <a href="" class="cs-logo" aria-label="back to home">
+        <img src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo-light.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+    </a>
+    <!--Top Bar-->
+    <ul class="cs-top-bar">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Kontakt os nu</span>
+                <a href="tel:+4550577411" class="cs-link">50 57 74 11</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send en besked</span>
+                <a href="mailto:Info@Horsenswebdesign.dk" class="cs-link">Info@Horsenswebdesign.dk</a>
+            </div>
+        </li>
+        <li class="cs-item cs-remove">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Besøg os her</span>
+                <a href="" class="cs-link">Bækvej 34, 8700 Horsens</a>
+            </div>
+        </li>
+    </ul>
+    <div class="cs-bottom-bar">
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link ">
+                            Hjem
+                        </a>
+                    </li>
+                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/webdesign" class="cs-li-link cs-drop-link ">Webdesign</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/logographicdesign" class="cs-li-link cs-drop-link ">Logo & Grafisk design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/portfolio" class="cs-li-link ">
+                            Portefølje
+                        </a>
+                    </li>
+                     <li class="cs-li">
+                        <a href="/about" class="cs-li-link ">
+                            Om os
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact" class="cs-li-link ">
+                            Kontakt
+                        </a>
+                    </li>
+                   
+                   
+                </ul>
+            </div>
+        </nav>
+        <a href="" class="cs-button-solid cs-nav-button">Kontakt Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+         <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> 
+    </div>
+</header>
+                                
+        <main id="main">
+            
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                  Blog Article                -->
+            <!-- ============================================ -->
+
+            <article class="blog-article">
+                <!--Main Article Image-->
+                <picture class="blog-mainImage">
+                    <img src="/assets/images/blog/landing.jpg" alt="cgbnh" width="795" height="400" decoding="async" />
+                </picture>
+
+                <!--Article Info-->
+                <div class="article-group">
+                    <h1 class="blog-h1">Hvordan bygger man et responsivt website fra bunden?</h1>
+                    <div class="blog-authorGroup">
+                        <!--Author Image-->
+                        <picture class="blog-author-img">
+                            <img
+                            src="/assets/svgs/profile.svg"
+                            alt="house"
+                            width="32"
+                            height="32"
+                            decoding="async">
+                        </picture>
+                        <span class="blog-author">Niels Johan Tygesen</span>
+                        <span aria-hidden="true" class="blog-dot"></span>
+                        <!--Blog Date-->
+                        <span class="blog-date">Apr 11, 2024</span>
+                    </div>
+                </div>
+                <section id="blog-content">
+                    <h2>Til udviklere</h2>
+<p>Hvis du skal bygge en hjemmeside nu om dage, bør dit primære fokus være at sikre, at den er responsiv og kan tilpasses alle skærmstørrelser. Det skyldes, at Google har meddelt, at alle hjemmesider, der er responsive, vil rangere bedre på grund af bedre indlæsningstider, bedre brugervenlighed og vil blive foretrukket i mobile søgninger. Så en hjemmeside, der indlæses hurtigt og ser godt ud på alle mobilskærme, vil have en fordel i forhold til en hjemmeside, der ikke er bygget responsivt. Og hvis vi skal tale om mobil responsivitet, er vi også nødt til at tale om mobile first programming, hvor du bygger din html og css med mobilskærme i tankerne først. Responsivt design og mobile first-programmering går hånd i hånd, så for at få mest muligt ud af din hjemmeside, skal den laves mobile first og være fuldstændig responsiv.</p>
+<p>Denne artikel er til udviklere, der ønsker at forstå, hvordan pokker man laver responsive hjemmesider i første omgang, og den har alle de svar, jeg ville ønske, jeg vidste, da jeg startede. Så lad os komme i gang!</p>
+<h2>Start mobile first</h2>
+<p>Før du overhovedet tænker på at lave en responsiv hjemmeside, er du nødt til at forstå, hvordan man laver en mobile first-hjemmeside. Det er en nøglefærdighed i nutidens webudviklingsverden og efter min mening den bedste måde at lave en hjemmeside på, og det gør det faktisk lettere.</p>
+<p>Hele ideen er at strukturere din html og css med mobiltelefonen i tankerne først. Når du er færdig med din html, åbner du den i browseren og inspicerer elementet, og vælger iPhone 5SE-skærmindstillingen. Det er den mindste mobilskærmstørrelse, du vil støde på med en bredde på 320 px. Dette vil være dit lærred i stedet for den helt åbne desktop-visning. Det bliver det sidste! Vi starter med mobilen her, og det er her, det begynder. Jeg kan godt lide at zoome 75% ind, så det ikke er så småt. Det er den skærmstørrelse, du skal skrive din css til at passe til. Der kræves ingen media queries. Bare skriv den kode, der får alt til at passe i denne skærmstørrelse. Det er begyndelsen på mobile first-programmering!</p>
+<h2>Strukturering af css med henblik på mobile first</h2>
+<p>I mobile first starter vi toppen af din css-fil med mobilkoden og tilføjer derefter media queries til større skærmstørrelser, efterhånden som vi kommer ned på siden. De mest almindelige breakpoints at bruge er:</p>
+<p>400px - store telefoner
+568px - Liggende mobil
+768px - Tablet
+1024px - Lille desktop (bærbare computere)
+1300px - Normal desktop
+Og ethvert andet breakpoint, du måtte have brug for, så det passer til resten af dit design.
+Det er de standarder, jeg arbejder med, og nogle gange tilføjer man media queries imellem for at sikre, at nogle særlige elementer passer ind. Jeg kan godt lide at begynde at skrive css, så det passer til 320 px-skærme, og derefter tilføje en media query til en min. bredde på 400 px og foretage størrelsesjusteringer til de større telefoner, hvor det er nødvendigt, f.eks. øge skriftstørrelser, ikonstørrelser osv. Jeg starter ved 320px, fordi det er den mindste skærm, du vil støde på, så hvis du vil være fuldt responsiv, er vi nødt til at tage dem i betragtning og derefter tilføje en ny medieforespørgsel til de større telefoner og skræddersy siden til dem også for at få den bedste brugeroplevelse og det bedste design.</p>
+<p>For virkelig at være 100% responsive skal du indstille din inspector til &quot;responsive&quot;, starte på 320px og trække i kanten af vinduet og få det til at vokse. Uanset hvor noget i designet går i stykker eller ser dårligt ud, skal du indstille en medieforespørgsel til den specifikke skærmstørrelse og rette det. Gør dette hele vejen op forbi desktop-bredder. Ved at gøre det på denne måde vil din hjemmeside passe til alle mulige skærmstørrelser, og du kan sige, at den er 100% responsiv.</p>
+<p>Dette er din nye arbejdsskærm. Begyndelsen af dit css-ark starter med koden til at få dit indhold til at passe inden for disse grænser. Det er derfor, det kaldes &quot;mobile first&quot;. Desktop-first ville betyde, at vi kodede med en bredde på 1500px og så klemte ned. Det er den gamle måde at gøre tingene på, og det bør du undgå, hvor du kan.</p>
+<h2>Opsætning af media queries</h2>
+<p>Når jeg skriver dine media queries, bruger jeg altid min-width. Jeg laver ikke et interval eller en max-bredde. Det skyldes, at når du bruger min-widths, gælder al styling fra de tidligere media queries stadig for det næste trin op, og kun den nye css for den skærmstørrelse bliver indlæst oven på det, der kom før den. Det forhindrer, at du skal gentage kode eller lave sektioner om igen og igen. De bliver bare overført til den næste skærmstørrelse, hvor de bliver redigeret. Hvert trin op bør bringe dig tættere og tættere på desktopversionen af webstedet. Du laver ikke bare desktop-designet fra bunden, du bygger op til det, så når du når til det punkt, er alle de tunge løft allerede indlæst fra mobilen, alt, hvad der er tilbage, er lidt ekstra resizing eller tweaking for at toppe det af og lave din desktop nav og det endelige footer-design.</p>
+<p>Det er det smukke ved mobile first. I stedet for at starte med desktopstørrelsen og klemme alt ned eller omskrive nogle dele, når du bliver mindre, starter du småt og tilføjer til det trin for trin og bygger på den kode, du skrev tidligere, i stedet for at rive den ned. Det passer perfekt sammen med responsivt design, fordi det er nemmere at få tingene til at vokse ind i deres beholdere end at proppe dem ind og presse dem sammen. Så vi bør kunne opnå 100 % responsive designs med mindre arbejde, færre fejl og mindre hovedpine. Det er derfor, jeg er begyndt at tale om mobile first &quot;først&quot;. Det gør responsivt design så meget lettere at udføre, når det gøres på denne måde. Så lad os se, HVORDAN vi kan gøre dem responsive uden meget arbejde eller 50 media queries.</p>
+<h2>Hvordan laver man responsive websites</h2>
+<p>Når man forsøger at lave responsive hjemmesider, er det vigtigt først at få styr på html-strukturen og bruge semantisk html. Jeg bruger den samme struktur til alle mine sider, nemlig at dele designet op i sektioner, som hver især har deres eget section-tag, og indeni det har de deres egen .container div, og indeni den har de indholdet. Sådan her:</p>
+<p>BILLEDE!</p>
+<p>Sektionstagget hjælper med at fortælle Google og skærmlæsere, at denne sektion er forskellig fra de andre omkring den. De er selvstændige, og al information inde i dem er relevant og relateret til sektionens formål. Det er bedre på denne måde, for hvis vi laver dem alle som divs, kan det få tingene til at se lidt rodede ud og gøre det svært for Googles webcrawlere at gruppere information sammen og ikke bare forstå, hvad indholdet er, men også hvad det BETYDER i sammenhæng med tingene omkring det.</p>
+<p>Jeg kan godt lide at sætte individuelle containere ind i hver sektion, fordi ikke alle sektioner har den samme bredde. Jeg har set mange hjemmesider med en containerklasse, der omslutter hele hjemmesiden, og alt forbliver bare inden for den bredde. Det er kedeligt. Og det begrænser, hvad du kan skabe. Ved at have individuelle containere har du mere kontrol over, hvad der kan gøres i disse sektioner, og du er ikke begrænset til den samme bredde som resten af siden.</p>
+<h2>Opsætning af containers</h2>
+<p>Jeg kan godt lide at have et globalt css-ark, der bruges på alle sider, så disse stilarter kan ændres én gang, og de ændres på alle sider, som f.eks. header- og footer-kode, kernesidestilarter som skrifttyper og farver og knapper, og hvordan alle containere opfører sig.</p>
+<p>Selvom vi har individuelle containere i hver sektion, vil vi stadig gerne have nogle stilarter, som de alle har til fælles, så de opfører sig på samme måde. Her er, hvad jeg bruger på dem alle til at starte på 320px:</p>
+<p>BILLEDE!</p>
+<p>HVORFOR: Jeg indstiller beholderen til bredden 100%, så den vokser med skærmstørrelsen. Det er 100 % bredden af skærmstørrelsen. Det er sådan, du får dem til at vokse - ved at bruge procenter som bredder. Indstil derefter margen til &quot;auto&quot;. Når du indstiller den til auto, beregner den &quot;automatisk&quot; venstre og højre margen for at gøre beholderen centreret vandret på skærmen. Ethvert element med visning indstillet til blok og margen indstillet til auto vil altid være centreret vandret i sin beholder eller browservinduet. Så når beholderen holder op med at vokse med den maksimale pixel, du indstiller den til, forbliver den centreret på skærmen. Indstil derefter padding til padding: 0 10px for at tilføje padding til venstre og højre. padding tilføjer plads INDE i et element, mens margin tilføjer plads omkring det. Ved at tilføje padding til venstre og højre for dine containere giver det den 10px buffer mellem indholdet inde i den og kanten af skærmen. Selvom du ønsker, at din beholder skal være 100 % af bredden af skærmen kant til kant, vil du ikke have, at dit indhold rører 100 % kant til kant. Det ser ikke godt ud. Så ved at tilføje den plads INDE i beholderen for at &quot;pude&quot; venstre og højre side skaber du en lille bumper, som dit indhold kan sidde imod i stedet for skærmen.</p>
+<p>På dette billede, når vi svæver over en container i inspektøren, ser vi de grønne bjælker til højre og venstre. Det er din padding.</p>
+<p>BILLEDE!!</p>
+<p>Når man kredser tilbage, fortæller max-bredden den, ved hvilken pixelbredde den skal stoppe med at vokse. Den bedste &quot;hurtige&quot; måde at opretholde ensartet design på alle de mærkelige skærmstørrelser mellem mobil og tablet er at indstille dine containere til at have en maks. bredde på 450 px, hvilket bare er lidt større end den største telefonskærm. På den måde mellem 450px og 568px (landskabstilstand på telefoner) forbliver containerne 450px, og designet &quot;vokser&quot; ikke længere end det. Elementerne inde i disse beholdere bliver, hvor de er. Den eneste ulempe er, at indholdet vil have en masse plads til venstre og højre og måske ikke ser bedst ud. Men dette er den hurtige og beskidte måde at få den til at reagere fuldt ud. Det, jeg faktisk råder dig til at gøre, er at tilføje ekstra medieforespørgsler og ændre designet og størrelsen af dine elementer inde i beholderne for at fylde skærmen op i alle mulige størrelser - hvis du har tid til at gøre en indsats. Det kan være lidt tidskrævende at gøre det den lange vej, men den overordnede kvalitet af produktets udseende vil være så meget bedre. Bare gør det, jeg nævnte tidligere, og øg størrelsen af browservinduet, og hvor designet går i stykker hvor som helst på siden, indstil en medieforespørgsel for den størrelse og ret den, og så videre.</p>
+<p>Så hvis du vil være virkelig lydhør, skal du indstille en max-bredde på din container til 1000px, hvilket vil være den perfekte størrelse, når du kommer til 1024px-størrelsesdelen af din css. Når du så kommer højere, kan du ændre max-bredden til hvad den skal være for de forskellige sektioner. Der er ingen &quot;én bredde til at styre dem alle&quot;, det er helt afhængigt af dit design og kan være forskelligt for flere sektioner og medieforespørgselsstørrelser. Det er ok!</p>
+<p>Overordnet set er dette den grundlæggende skabelon, du skal vænne dig til at gøre for at begynde at bruge mobilt første responsive design på dine hjemmesider. Du har din sektion med en containerklasse inde i den, og sektionsindholdet inde i den container. Beholderen er indstillet til 100 % bredde og en maksimal bredde, som du ønsker, at den skal stoppe med at vokse til, og margin auto vil holde den centreret, mens polstringen til venstre og højre forhindrer, at indholdet rører kanterne af skærmen. Det er den grundlæggende byggesten i responsivt design og vil være en metode, hvor du vil bruge MEGET, så det er vigtigt virkelig at forpligte dette mønster til muskelhukommelsen. Du kan også indstille dit indhold til bredde: 100 %, så det kan vokse med størrelsen på sin beholder. Bare sørg for at tjekke sidedesignet, når du øger bredden af skærmen og se, hvilket sektionsskift eller se ud, og indstille en specifik medieforespørgsel til at målrette den.</p>
+<h2>Hvordan du skal strukturere din html</h2>
+<p>Nu til den sjove del! Når du får et desktopdesign, hvordan strukturerer du så din html for den bedste overgang fra mobil til desktop? Den første ting du skal gøre er at analysere hver SECTION individuelt og bryde designet ned i dets beholdere og stykkerne inde i dem. Her er et eksempel på design fra min hjemmeside:</p>
+<h2>Stacking order i html</h2>
+<p>Når du skriver din html, skal du huske på, hvordan elementerne stables baseret på den oder, hvori de optræder i koden. Hvis du har tre elementer, i rækkefølge fra top til bund, vil det øverste element naturligvis være først i mobilen, og på desktop, hvis de skal stables vandret, så vil det være i venstre side, det midterste element vil være i midten og den sidste vises til højre.</p>
+<p>BILLEDE !!!</p>
+<p>Det er et simpelt koncept, og det kender mange sikkert allerede, men jeg ville gerne smide dette ind for dem, der måske har misset denne del eller havde brug for at vide det. Når du skriver din html og strukturerer dine elementer, skal du huske på, at at gå fra top til bund i html til sidst vil stable venstre mod højre, når der er plads nok.</p>
+<p>Blokniveauelementer (display:blok) vises på deres egne linjer. Så startende øverst, med &quot;Hvad vi gør&quot;, grafik og afsnit, hvad er den enkleste måde at kode det ved at bruge så få div'er (hvis nogen) som muligt? Skal du pakke disse elementer ind i én beholder og arbejde med dem inde i den?</p>
+<p>Når jeg ser dette, ser jeg først blokniveauelementerne, der kan være på deres egen linje uden nogen ved siden af dem, såsom overskriften og afsnittet. Jeg kan indstille dem til display:block og text-align:center. Dette vil centrere dem med eller uden en beholder omkring dem, fantastisk! Men gruppen af grafik ser ud til, at den SKAL være i en separat beholder, så vi kan bruge Flexbox til at arbejde specifikt på dem og centrere dem. Så for den sektion ser det ud til, at vi bare har brug for den ene container div til at gruppere grafikken sammen, så de kan arrangeres, de to andre kan bare være blokniveauelementer og vil skaleres fint ved at gå fra mobil til desktop, fordi de i det væsentlige vil være i de samme nøjagtige pletter opfører sig på nøjagtig samme måde.</p>
+<p>Nu til gruppen af tre mini &quot;kort&quot;, der er centreret vandret. Fordi de er ved siden af hinanden, kan vi ikke slippe afsted med at gøre dem alle på blokniveau, da de skal være i en linje sammen (display:inline-blok), og ikke af sig selv. Så vi kan tilføje en div omkring dem med en klasse af &quot;wrapper&quot;, så vi kan arrangere dem i den container uden at påvirke resten af sektionen over den. Og inden i den container ser det ud til, at hvert &quot;kort&quot; også skal have en container omkring sig, lad os kalde det &quot;item&quot;, og hvert element inde i det kan være blokniveauelementer, da de alle er på deres egen linje af sig selv. Så det ser ud til, at det er her, vi kan stoppe med at tilføje containere.</p>
+<p>Jeg ved, at det er meget at tage med i teksten, så her er en grafik, der viser, hvordan vi grupperede alt visuelt for at planlægge deres css-placering og arrangement:</p>
+<p>BILLEDE!</p>
+<p>Det kan være lille at se, om du er på mobil, men det røde felt er dine sektionstags, og indeni det er din container (grøn boks), og de blå felter er de ekstra indholdscontainere, vi skal bruge for at arrangere disse elementer uden at ødelægge de andre elementer. Vi &quot;indeholder&quot; dem, så de kan manipuleres separat fra resten af afsnittet. De orange felter på venstre og højre side af din beholder er din margin: autocentrerer beholderen inde i sektionsmærkerne. De sorte bokse er de &quot;vare&quot;-beholdere, vi bruger til at pakke hver enkelt gruppe ind, så de indeholder indholdet. Elementerne inde i dem kan alle indstilles til display:block, text-align:center, margin:auto for at centrere dem lodret og vandret i .item-beholderen.</p>
+<p>Sådan skal mobilversionen se ud med den givne html-struktur og naturlige stabling af html-elementerne:</p>
+<p>Billede!!!</p>
+<p>Du kan begynde at &quot;SE&quot; hvordan mobil kan startes ved at se på strukturen af skrivebordsdesignet, opdele det i dets blokniveauelementer og dets containere. Dette er teknisk set den bedste måde at strukturere html'en for dette design ved at bruge den mindst mulige mængde divs. Jeg siger teknisk, fordi vi endda kunne slette den vigtigste .container div omkring alt, da det ser ud til, at det ikke er nødvendigt for at fungere som en barriere for elementer at rykke op imod. Jeg efterlod det på skrivebordsbilledet for at vise, hvordan det ser ud. Hvis vi fjernede .container-klassen, hvordan tror du så indholdet kan forblive centreret? Divs er blokniveauelementer som standard, så din .wrapper-klasse omkring de tre .items behøver bare margin:auto for at centrere sig selv vandret inden for sektionstags. Sådan skal html'en se ud:</p>
+<p>BILLEDE!!</p>
+<p>Kopier denne html og se om du selv kan genskabe layoutet i din egen kodeeditor. Jeg fjernede .containeren fra dette design, fordi det ikke er nødvendigt, og vores mål, når vi skriver html, er at bruge så få div'er som muligt. Dette vil få os til at skrive renere, bedre ydende og lettere at forstå kode.</p>
+<p>Det er sådan, du skal se på designs for korrekt at planlægge, hvordan de vil se ud og opføre sig fra mobil til desktop, og det er den første ting, du skal gøre, før du skriver nogen kode. Du skal analysere de individuelle sektioner og planlægge din html-struktur baseret på, hvad der kan være blokniveauelementer, og hvad der har brug for containere. At finde ud af, HVORDAN du vil gruppere elementerne, vil hjælpe dig med at se, hvordan puslespilsbrikkerne kan arrangere sig selv fra mobil til desktop.</p>
+<p>Du vil også bemærke brugen af aria-hidden=&quot;true&quot;, dette er en Aria-attribut, der fortæller skærmlæsere at ignorere dette element, da det ikke er vigtigt. Vi bruger dette til alt, der udelukkende bruges til design og har ingen betydning for at forstå indholdet på siden. Så dybest set ville alle ikoner have denne egenskab på sig, da de kun er til at se og tilføjer intet til læsernes forståelse af, hvad de læser. For at lære mere om webtilgængelighed og brug af de rigtige Aria-attributter, besøg www.w3.org for at lære om dem, og hvornår du skal bruge dem. Dette er noget, du skal bruge meget, når du skriver din html. Hav dem altid i tankerne!</p>
+<p>Så hvis vi først skulle kode denne mobil, ville vi starte øverst. Jeg vil bruge en gammeldags måde at centrere indhold uden Flexbox på denne for at vise en anden måde at gøre tingene på. Når du har inline-blok-elementer inde i en container, hvis du tilføjer text-align:center på containeren, vil alle inline-blokkene nu blive centreret inde i containeren. vertikal-align: midt centrerer inline-blokelementer lodret inde i deres beholdere. Det er en fin lille ejendom, jeg brugte en gang imellem.</p>
+<p>BILLEDE!!</p>
+<p>Vi kan så skabe plads mellem billederne ved at tilføje margen til venstre og højre for hvert billede med margin:0 10px. Dette tilføjer 0 margen top og bund og 10px margen til venstre og højre. Dette er en meget hurtig og nem måde at centrere og placere elementer inde i en container ved hjælp af inline-blok-egenskaben. Du kan også bruge tekstjustering: venstre eller højre, og det vil skubbe alle elementer til venstre eller højre for beholderen. Sådan skal det se ud:</p>
+<p>Billede!</p>
+<p>Jeg tilføjede width:100% og max-width:600px til p-tagget, fordi jeg vil have det til at vokse bredere med skærmen og stoppe ved 600px, hvilket er hvor bredt det i sidste ende bliver på skrivebordet. Så når vi kommer til tablet, vil den allerede være på skrivebordsstørrelsen og behøver ikke røre ved den, når vi kommer til skrivebordet. Mindre arbejde! Den har også en polstring til venstre og højre på 10px, da vi ikke bruger beholderen længere. Den skal bruge noget for at forhindre den i at røre kanterne på skærmen, så når vi har elementer uden en hovedbeholder at skubbe op imod, kan vi bare tilføje polstringen til venstre og højre, som ville have været der med beholderen.</p>
+<p>Med hensyn til css'en om, hvordan du vil arrangere og centrere de 3 kort, anbefaler jeg stærkt at lære at bruge flexbox fra Flexbox Froggy og øve dig i at bruge det. Jeg vil ikke gå ind i flexbox her, fordi denne artikel allerede er lang nok... Men for at gøre det uden Flexbox, brug den samme inline-blok teknik, som jeg brugte på billederne. Det vil gøre det samme arbejde.</p>
+<p>Men! Jeg vil ikke lade dig hænge på, hvilken kode du skal bruge, så for .wrapper-beholderen er her koden, du ville skrive på skrivebordet:</p>
+<p>BILLEDE!</p>
+<p>Dette vil centrere emnerne og stable dem lodret, og tillade dem at vokse med skærmstørrelsen, der kun stopper ved 350px bred, mens de stadig er centreret.</p>
+<p>Disse elementer forbliver på denne måde hele vejen gennem tabletten. Så når du kommer til den skærmstørrelse, skal du ikke gøre noget!</p>
+<p>Billede!</p>
+<p>Billede2!</p>
+<p>Når du kommer til skrivebordet, er ovenstående kode, hvad du skal bruge. Flexbox og CSS Grid er de grundlæggende værktøjer til at skabe responsive hjemmesider. Jeg bruger Flexbox overalt på min side. Med blot et par linjer kode kan du fuldstændig omarrangere stablingen og placeringen af elementerne inde i flexbeholderne. Efter at have læst denne artikel, foreslår jeg stærkt at du lærer og øver dig med Flexbox og Grid.</p>
+<h2>Opsummering</h2>
+<p>Det er alt det grundlæggende i mobil første responsive programmering og hvordan man konfigurerer det. Forhåbentlig hjælper dette dig med at forstå, hvordan du konfigurerer din css for at begynde mobilt første responsive design. Det kræver øvelse og lidt tilvænning, men når først du har formlen nede, og du bliver rigtig god til at nedbryde hver sektions design i deres mest basale og minimale strukturer, vil det hele komme i anden natur for dig, og til sidst vil du være i stand til bare at se på et skrivebordsdesign og &quot;vide&quot; præcis, hvordan du vil bygge det. Dette vil gøre dig meget mere effektiv i din tid, og din kode vil blive skrevet mere rent og med mere formål, hvilket vil minimere mængden af fejl og hovedpine, du kan løbe ind i under processen.</p>
+
+                </section>
+            </article>
+        </div>
+        <!-- End .main-content -->
+
+        <!-- ============================================ -->
+<!--                Featured Posts                -->
+<!-- ============================================ -->
+
+<div class="blog-sidebar">
+  <!--Featured-->
+  <div class="blog-featured-group">
+    <span class="blog-header">Featured Posts</span></div>
+  <!--Add anything else in the sidebar below-->
+</div>
+    </div>
+
+        </main>
+        <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1340">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <h2 class="cs-title">Få en webløsning, der passer til dine behov</h2>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit facebook profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg" alt="facebook" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit twitter profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-1a.svg" alt="twitter" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-1a.svg" alt="instagram" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit youtube profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-1a.svg" alt="instagram" width="11" height="11">
+                </a>
+            </div>
+        </div>
+        <!-- Links -->
+        <div class="cs-ul-wrapper">
+            <span class="cs-header">Navigation</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="/webdesign">Services</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="">Projekter</a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="/about">Om Os</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-ul-wrapper">
+            <!-- Contact Info -->
+            <span class="cs-header">Kontakt</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:4550577411">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="phone icon" width="24" height="24">
+                        +45 50 57 74 11 
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="mailto:info@Horsenswebdesign.dk">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/email-1a.svg" alt="email icon" width="24" height="24">
+                        info@Horsenswebdesign.dk
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-1a.svg" alt="pin icon" width="24" height="24">
+                        Horsens, Horsens
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-credit">
+            © Copyright 2024 <a href="" class="cs-credit-link" target="_blank">Horsens Webdesign</a>
+        </span>
+       
+    </div>
+</footer>
+                                
+
+    </body>
+</html>

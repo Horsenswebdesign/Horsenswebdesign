@@ -1,0 +1,63 @@
+---
+title: 'Horsens Webdesign | Om Os'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/1.jpg'
+permalink: 'about/'
+eleventyNavigation:
+    key: About Us
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Om os</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/1.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/pic1.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/pic1.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/pic1.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">Om os</span>
+                <h2 class="cs-title">Om Horsens Webdesign</h2>
+                <p class="cs-text">
+                    Mit navn er Niels Johan og jeg er ejer og ene udvikler hos Horsens Webdesign. Jeg ønsker en karriere jeg kan gøre hjemmefra og har derfor brugt 2 år på at lære mig selv at kode hjemmesider på den rigtige måde helt fra bunden. Jeg begyndte derefter at ringe til små virksomheder og tilbyde min hjælp.
+                </p>
+                <p class="cs-text">
+                   Det, jeg fandt ud af, var, at mange små virksomheder ikke har midlerne til at bruge tusindvis af kroner på en ny hjemmeside. Og dem, der havde, blev udnyttet og havde en forfærdelig hjemmeside, der så ud, som om den var bygget af nogen i et fangehul og ikke havde set designtrends de sidste 10 år. De var i en frustrerende situation - enten havde de ikke råd til en god hjemmeside, og hvis de havde, vidste de ikke, hvem de skulle stole på til at lave noget godt. Så jeg ændrede min forretningsmodel, så den passede til deres behov. Det var sådan, jeg fandt på min model med 0 kroner i udbetaling og 999 kroner om måneden. Det er mere overskueligt for en lille virksomhed at håndtere, og det vil ikke skade deres bankkonti.
+                </p>
+                <a href="/projects" class="cs-button-solid">Vores projekter</a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

@@ -1,0 +1,450 @@
+---
+title: 'Horsens Webdesign'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/3.jpg'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero">
+        <div class="cs-container">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Horsens webdesign</span>
+                <h1 class="cs-title">Håndkodede hjemmesider til kun 999.- om måneden</h1>
+                <p class="cs-text">
+                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
+                </p>
+                <a href="/webdesign" class="cs-button-solid">Se mere</a>
+                <a href="/contact" class="cs-button-transparent">
+                    Kontakt os
+                </a>
+            </div>
+        </div>
+
+        <!-- Background Image -->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/3.jpg" alt="new home" width="2500" height="1667" loading="eager">
+        </picture>
+    </section>
+   
+                                
+<!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-1371">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Hvorfor vælge os?</span>
+            <h2 class="cs-title">0 Kroner i udbetaling <br> 999 Kroner om måneden <br> 12 Måneders binding</h2>
+            <p class="cs-text">
+                0 kroner i udbetaling for en standard 5 siders hjemmeside til en lille eller mellemstor virksomhed. Hvis du har brug for mere end det, laver en tilpasset pris baseret på arbejdets omfang, antallet af ekstra sider og den tid, det tager. 
+            </p>
+            <p class="cs-text">
+                <strong>Du ejer selv dit domæne og dit indhold. Du kan opsige abonnementet når du vil, dog ikke i din bindingsperiode.</strong>
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why1.svg" alt="icon" width="24" height="24">
+                    Hosting inkluderet
+                </h3>
+                <p class="cs-item-text">
+                    Du skal ikke bekymre dig om hosting for din hjemmeside. Det er inkluderet i prisen. 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why2.svg" alt="icon" width="24" height="24">
+                    24/7 Kundeservice
+                </h3>
+                <p class="cs-item-text">
+                    Vi kan træffes på min mobiltelefon, når du har brug for det. 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why3.svg" alt="icon" width="24" height="24">
+                    Perfekt Google hastighed
+                </h3>
+                <p class="cs-item-text">
+                    En høj Google hastighed er med til at rangere dig højt på Google. Dette er noget af det vigtigste i forhold til, hvor nemt det er for kunder, at ifnde dig på Google. 
+                </p>
+            </li>
+            <li class="cs-item-picture">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/7.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/7.jpg">
+                    <!-- 4,5,7 -->
+                    <img loading="lazy" decoding="async" src="/assets/images/7.jpg" alt="people" width="590" height="418">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why4.svg" alt="icon" width="24" height="24">
+                    Ubegrænsede ændringer
+                </h3>
+                <p class="cs-item-text">
+                    Prisen inkluderer ubegrænsede ændringer. Der er ingen merpris for at få noget rettet. 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why5.svg" alt="icon" width="24" height="24">
+                    Web Design & Develop
+                </h3>
+                <p class="cs-item-text">
+                    Din hjemmeside er designet og udviklet specifikt til dig. Prisen inkluderer logo og design.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why6.svg" alt="icon" width="24" height="24">
+                    Google Analytics
+                </h3>
+                <p class="cs-item-text">
+                    Vi installerer Google Analytics for at kunnne se hvor din hjemmesides trafik kommer fra.
+                </p>
+            </li>
+        </ul>
+        <a href="/webdesign" class="cs-button-solid">Læs mere</a>
+    </div>
+    <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+    <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+</section>
+                          <!-- ============================================ -->
+                           <!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-1387">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Vores løsninger</span>
+            <h2 class="cs-title">Fleksible prisplaner skræddersyede til dine behov</h2>
+            <p class="cs-text">
+                
+            </p>
+            <div class="cs-toggle-group">
+                <span id="cs-option1-1387" class="cs-plan">Betal månedligt</span>
+                <div class="cs-toggle" aria-label="click to switch plans pricing">
+                    <span aria-hidden="true" class="cs-toggle-switch"></span>
+                </div>
+                <span id="cs-option2-1387" class="cs-plan">Engangsbetaling</span>
+            </div>
+        </div>
+        <ul class="cs-card-group cs-option1">
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">Standard Pack</span>
+                    <span class="cs-price">
+                        999,-
+                        <span class="cs-duration"></span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        På tilbud
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Inklusiv domæne</li>
+                        <li class="cs-li">Inklusiv hosting</li>
+                        <li class="cs-li">Inklusiv logo</li>
+                        <li class="cs-li">Ubegræsende ændringer</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Bestil nu</a>
+                </div>
+            </li>
+            
+        </ul>
+        <ul class="cs-card-group cs-option2">
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">Standard Pack</span>
+                    <span class="cs-price">
+                        19999.-
+                        <span class="cs-duration"></span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        På tilbud
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Inklusiv domæne</li>
+                        <li class="cs-li">Inklusiv logo</li>
+                        <li class="cs-li cs-disabled">Eksklusiv hosting</li>
+                        <li class="cs-li cs-disabled">Eksklusiv gratis ændringer</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Get Now</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-585">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Vores process</span>
+            <h2 class="cs-title">Vores processer sikrer et tæt samarbejde</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Introduktion</h3>
+                <p class="cs-item-text">
+                    At begive sig ud på en rejse med os begynder med en venlig samtale. Vi lærer din virksomhed at kende ud og ind, så vi ved, hvad der adskiller dig fra dine konkurrenter. Derefter fastlægger vi stilen for din hjemmeside. 
+                </p>
+                <span class="cs-number">01</span>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Skræddersyet design</h3>
+                <p class="cs-item-text">
+                    Dernæst laver vi et helt skræddersyet design, der viser din virksomhed frem. Dette design er ikke hugget i sten; vi samarbejder med dig og finpudser og justerer, indtil du er helt tilfreds med den endelige æstetik.
+                    
+                </p>
+                <span class="cs-number">02</span>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Udvikling</h3>
+                <p class="cs-item-text">
+                    Når du er tilfreds, begynder udviklingen. Vi håndkoder din hjemmeside og sørger for, at den er rig på passende søgeord, så du nemt kan findes på Google. Vi øger sidehastigheden og sender dig en forhåndsvisning til et sidste tjek.
+                </p>
+                <span class="cs-number">03</span>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Overdragelse</h3>
+                <p class="cs-item-text">
+                   
+                    Når du har lanceret din nye hjemmeside, er det kun begyndelsen på rejsen. Vi fortsætter med at håndtere hosting, ubegrænsede redigeringer, 24/7 support, livstidsopdateringer, sikkerhedskopier og sikkerhed, så du kan holde fokus på at drive din virksomhed.
+                </p>
+                <span class="cs-number">04</span>
+            </li>
+        </ul>
+    </div>
+</section>
+                                            
+                                                
+                                
+<!--                 Recent Posts                 -->
+<!-- ============================================ -->
+
+<section id="blog-1347">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Vores Blog</span>
+            <h2 class="cs-title">Vores artikler</h2>
+            <p class="cs-text">
+                
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="/">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-client.png">
+                        <source media="(min-width: 601px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-client.png">
+                        <img decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-client.png"
+                            alt="agency" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">
+                            Er håndkodede websites bedre end WordPress?
+                            <picture class="cs-icon-wrapper">
+                                <img class="cs-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                        alt="arrow" width="413" height="374" aria-hidden="true">
+                            </picture>
+                        </h3>
+                        <div class="cs-info">
+                            <span class="cs-date">
+                                <img class="cs-date-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg"
+                                        alt="calendar" width="413" height="374" aria-hidden="true">
+                                11 April, 2024
+                            </span>
+                            <span class="cs-category">
+                                Ecommerce
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="/">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-presentation.png">
+                        <source media="(min-width: 601px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-presentation.png">
+                        <img decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-presentation.png"
+                            alt="agency" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">
+                            Hvordan tilføjer man Dark Mode til et website?
+                            <picture class="cs-icon-wrapper">
+                                <img class="cs-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                        alt="arrow" width="413" height="374" aria-hidden="true">
+                            </picture>
+                        </h3>
+                        <div class="cs-info">
+                            <span class="cs-date">
+                                <img class="cs-date-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg"
+                                        alt="calendar" width="413" height="374" aria-hidden="true">
+                                11 April, 2024
+                            </span>
+                            <span class="cs-category">
+                                Ecommerce
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="/">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-laptops.png">
+                        <source media="(min-width: 601px)"
+                            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-laptops.png">
+                        <img decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-laptops.png"
+                            alt="agency" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">
+                            Hvordan bygger man et responsivt website fra bunden
+                            <picture class="cs-icon-wrapper">
+                                <img class="cs-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                        alt="arrow" width="413" height="374" aria-hidden="true">
+                            </picture>
+                        </h3>
+                        <div class="cs-info">
+                            <span class="cs-date">
+                                <img class="cs-date-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg"
+                                        alt="calendar" width="413" height="374" aria-hidden="true">
+                                11 April, 2024
+                            </span>
+                            <span class="cs-category">
+                                Digital Agency
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>         
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/pic1.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">Om os</span>
+                <h2 class="cs-title">Om Horsens Webdesign</h2>
+                <p class="cs-text">
+                    Mit navn er Niels Johan og jeg er ejer og ene udvikler hos Horsens Webdesign. Jeg ønsker en karriere jeg kan gøre hjemmefra og har derfor brugt 2 år på at lære mig selv at kode hjemmesider på den rigtige måde helt fra bunden. Jeg begyndte derefter at ringe til små virksomheder og tilbyde min hjælp.
+                </p>
+               
+                <a href="/about" class="cs-button-solid">Læs mere</a>
+            </div>
+        </div>
+    </section>
+ <script>
+
+    const leftOption = document.querySelector("#pricing-1387 #cs-option1-1387");
+        const rightOption = document.querySelector("#pricing-1387 #cs-option2-1387");
+        const toggle = document.querySelector("#pricing-1387 .cs-toggle");
+        const cardGroup = Array.from(document.querySelectorAll('#pricing-1387 .cs-card-group'))
+        // when you click the middle toggle
+        toggle.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.toggle("cs-active");
+            }
+            toggle.classList.toggle("active");
+        });       
+        // when you click the left button option
+        leftOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.remove("cs-active");
+            }
+            toggle.classList.remove("active");
+        });    
+        // when you click the right button option
+        rightOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.add("cs-active");
+            }
+            toggle.classList.add("active");
+        });
+                                
+ </script>
+{% endblock %}
