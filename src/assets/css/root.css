@@ -520,7 +520,12 @@
     display: inline-block;
     position: relative;
   }
-  #cs-navigation .cs-li-link.cs-active {
+  #cs-navigation .cs-active3 {
+    color: var(--primary);
+    background-color: var(--primary);
+  }
+
+  #cs-navigation .cs-li-link.cs-drop-link.cs-active {
     color: var(--primary);
   }
   #cs-navigation .cs-li-link:hover {
@@ -3211,5 +3216,3 @@
     background-color: #1a1a1a;
   }
 }
-
-/*# sourceMappingURL=root.css.map */

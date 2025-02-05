@@ -57,19 +57,22 @@
                         </a>
                     </li>
                     <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
+                        <span class="cs-li-link {% if '/webdesign' in page.url %}cs-active{% endif %}{% if '/seo' in page.url %}cs-active{% endif %}{% if '/marketing' in page.url %}cs-active{% endif %}{% if '/contentwriting' in page.url %}cs-active{% endif %}">
                             Services
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li">
-                                <a href="/webdesign" class="cs-li-link cs-drop-link {{ 'cs-active' if '/services/' == page.url }}">Webdesign</a>
+                                <a href="/webdesign" class="cs-li-link cs-drop-link {{ 'cs-active-dropdown' if '/webdesign/' == page.url }}">Webdesign</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/seo" class="cs-li-link cs-drop-link">SEO</a>
+                                <a href="/seo" class="cs-li-link cs-drop-link {{ 'cs-active-dropdown' if '/seo/' == page.url }}">SEO</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/marketing" class="cs-li-link cs-drop-link">Marketing</a>
+                                <a href="/marketing" class="cs-li-link cs-drop-link {{ 'cs-active-dropdown' if '/marketing/' == page.url }}">Marketing</a>
+                            </li>
+                             <li class="cs-drop-li">
+                                <a href="/contentwriting" class="cs-li-link cs-drop-link {{ 'cs-active-dropdown' if '/contentwriting/' == page.url }}">Contentwriting</a>
                             </li>
                         </ul>
                     </li>
