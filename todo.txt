@@ -1,1 +1,9 @@
-Blog images / alt texts 
+
+Generelt: 
+    Billeder er for dårlig opløsning
+
+Blog: 
+    Blog images / alt texts 
+    Blog siden har ikke samme zoomfaktor 
+
+
