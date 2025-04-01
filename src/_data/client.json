@@ -1,6 +1,6 @@
 {
-    "name": "Lund Webdesign",
-    "email": "info@lundwebdesign.dk",
+    "name": "Horsens Webdesign",
+    "email": "info@Horsenswebdesign.dk",
     "phoneForTel": "50577411",
     "phoneFormatted": "(45) 50 57 74 11",
     "address": {
@@ -11,5 +11,5 @@
         "zip": "8700",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "https://www.horsenswebdesign.dk"
 }
